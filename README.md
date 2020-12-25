@@ -1,1 +1,1 @@
-## Simple Flask App
+## Quiz Application developed using Python Flask
