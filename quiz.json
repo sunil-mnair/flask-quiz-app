@@ -1,0 +1,62 @@
+{
+"geography":    
+[
+    {
+        "id": 1,
+        "question":"What continent is India on?",
+        "choice1": "Asia",
+        "choice2": "Africa",
+        "choice3": "Antartica",
+        "choice4": "North America",
+        "answer": "Asia"
+    },
+    {
+        "id": 2,
+        "question":"Which mountain range is Mount Everest in?",
+        "choice1": "The Himalayas",
+        "choice2": "Andes",
+        "choice3": "Alps",
+        "choice4": "Snowdonia in Wales",
+        "answer": "The Himalayas"
+    },
+    {
+        "id": 3,
+        "question":"Where would you find pyramids? ",
+        "choice1": "Russia",
+        "choice2": "Turkey",
+        "choice3": "Egypt",
+        "choice4": "South Korea",
+        "answer": "Egypt"
+    }
+],
+"wildlife":    
+[
+    {
+        "id": 1,
+        "question":"Which is the only big cat that cant roar?",
+        "choice1": "Lion",
+        "choice2": "Tiger",
+        "choice3": "Cheetah",
+        "choice4": "Puma",
+        "answer": "Cheetah"
+    },
+    {
+        "id": 2,
+        "question":"Which is the largest land animal?",
+        "choice1": "Giraffe",
+        "choice2": "Elephant",
+        "choice3": "Polar Bear",
+        "choice4": "Hippopotamus",
+        "answer": "Elephant"
+    },
+    {
+        "id": 3,
+        "question":"How long does it take a slot to digest food?",
+        "choice1": "2 Weeks",
+        "choice2": "1 Month",
+        "choice3": "8 Hours",
+        "choice4": "1 Week",
+        "answer": "2 Weeks"
+    }
+]
+}

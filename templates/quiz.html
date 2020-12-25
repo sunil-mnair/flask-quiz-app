@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+<h1>Quiz App</h1>
+
+<form action="/quiz" method="POST">
+    <label>Select your Theme</label>
+    <select name="theme">
+        {% for theme in quizapp %}
+        <option value={{ theme }}>{{ theme }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Start Quiz">
+</form>
+
+{% endblock %}
