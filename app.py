@@ -4,6 +4,7 @@ from datetime import datetime
 import json
 
 
+# Load the JSON File into a dictionary
 with open('quiz.json') as file:
     quizapp = json.load(file)
 
@@ -23,12 +24,17 @@ def quiz():
         # Store all the questions, choices and correct answer for the selected theme
         session["game"] = [{theme:questions} for (theme,questions) in quizapp.items() if theme==session["theme"]][0]
         
+        # Sum of questions for the selected theme
         session["total_questions"] = len(session["game"][session["theme"]])
 
-        session["id"] =  0
+        # Starting ID for 1st question
+        session["current_question_id"] =  1
+
+        # Starting Score
         session["score"] = 0
 
-        session["current_question"] = [game for game in session["game"][session["theme"]]][session["id"]]
+        # Pick the First Question from the selected theme
+        session["current_question"] = [game for game in session["game"][session["theme"]]][session["current_question_id"]-1]
 
         return render_template("start_quiz.html",
         game = session["current_question"])
@@ -42,22 +48,21 @@ def start_quiz():
     
     if request.method == "POST":
         
-        print(session["id"])
-
+        # Gather the answer provided by the player
         given_answer = request.form["given_answer"]
-        print(given_answer)
 
+        # If Condition to check the answer
         if given_answer == session["current_question"]["answer"]:
             flash("Correct Answer","correct")
             session["score"] += 1
         else:
             flash("Incorrect Answer","wrong")
 
-        if session["total_questions"] > session["id"] + 1:
 
-            session["id"] += 1
-
-            session["current_question"] = [game for game in session["game"][session["theme"]]][session["id"]]
+        # Proceed to next question
+        if session["total_questions"] > session["current_question_id"]:
+            session["current_question_id"] += 1
+            session["current_question"] = [game for game in session["game"][session["theme"]]][session["current_question_id"]-1]
         else:
             flash("Quiz Completed. Try another Theme","completed")
 
