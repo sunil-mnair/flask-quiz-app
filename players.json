@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Sunil",
+    "score": 3,
+    "theme": "geography"
+  },
+  {
+    "name": "Great",
+    "score": 2,
+    "theme": "geography"
+  },
+  {
+    "name": "Harsha",
+    "score": 2,
+    "theme": "geography"
+  },
+  {
+    "name": "Graham",
+    "score": 1,
+    "theme": "geography"
+  },
+  {
+    "name": "Sun",
+    "score": 1,
+    "theme": "geography"
+  },
+  {
+    "name": "Aakash",
+    "score": 0,
+    "theme": "geography"
+  }
+]

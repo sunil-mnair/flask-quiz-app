@@ -26,6 +26,24 @@
             <h3 class="wrong">{{ message }} | Score {{ session["score"] }}</h3>
         {% else %}
             <h3 class="completed">{{ message }}</h3>
+
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+
+                {% for player in players %}
+                <tr>
+                    <td>{{ player["name"] }}</td>
+                    <td>{{ player["score"] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+
+
             <h3><a href="/quiz">Back to Theme Page</a></h3>
         {% endif %}
 
